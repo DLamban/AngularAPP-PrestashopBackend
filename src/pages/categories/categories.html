@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+      <ion-title>
+        <ion-col col-9>
+        Categorías
+        </ion-col>
+          <ion-spinner id="loadingIcon" *ngIf="show" ></ion-spinner>
+        <ion-col col-3 >
+          <ion-icon name="cart" id="iconCart"><ion-badge *ngIf="showCart">{{productsCartBadge}}</ion-badge></ion-icon>
+        </ion-col>
+      </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding >
+ 	<ion-list>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col col-4 col-md-4 *ngFor="let item of categories">
+          <ion-item text-center (click)="reloadCategories(item.name,item.id)">
+
+            <img width="auto" height="auto" src={{item.imgUrl}}/>
+            <br>
+           {{item.name}}
+
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+
+	</ion-list>
+</ion-content>

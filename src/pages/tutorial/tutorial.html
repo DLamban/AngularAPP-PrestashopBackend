@@ -1,0 +1,54 @@
+<ion-header no-border>
+  <ion-navbar>
+   <!-- <ion-buttons end *ngIf="showSkip">
+      <button ion-button (click)="startApp()" color="primary">Skip</button>
+    </ion-buttons>-->
+    <button ion-button menuToggle>probando sin icono
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-bounce>
+  <ion-slides #slides (ionSlideWillChange)="onSlideChangeStart($event)" pager>
+
+    <ion-slide>
+      <img src="assets/img/ica-slidebox-img-1.png" class="slide-image"/>
+      <h2 class="slide-title">
+        Bienvenido a <b>Araprinter</b>
+      </h2>
+      <p>
+        Una aplicacion para tus necesidades de impresion digital y artes graficas
+      </p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/img/ica-slidebox-img-2.png" class="slide-image"/>
+      <h2 class="slide-title" >¿Como puedo utilizarla?</h2>
+      <p>Para utilizar la aplicacion en todo su potencial es necesario utilizar un usuario registrado</p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/img/ica-slidebox-img-3.png" class="slide-image"/>
+      <h2 class="slide-title">¿Que puedo hacer?</h2>
+      <p>Puedes enviar tus diseños para sellos, visitar nuestro catálogo y realizar pedidos desde tu móvil</p>
+    </ion-slide>
+
+    <ion-slide>
+      <!--<img src="assets/img/ica-slidebox-img-4.png" class="slide-image"/>-->
+      <h2 class="slide-title">Elige una opcion para continuar a la tienda</h2>
+
+      <div class="botonera">
+        <button ion-button icon-end color="secondary" round (click)="goLoginPage()">
+          Identificarse
+        </button>
+        <br>
+        <button ion-button icon-end color="secondary" round  (click)="goSignupPage()">
+          Registrarse
+        </button>
+      </div>
+
+    </ion-slide>
+
+  </ion-slides>
+</ion-content>

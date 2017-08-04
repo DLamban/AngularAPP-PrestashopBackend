@@ -1,0 +1,14 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>CheckCart</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-item *ngFor="let address of addresses" (click)="selectAddress(address.id)">
+    {{address.address1}}, {{address.address2}}
+  </ion-item>
+</ion-content>

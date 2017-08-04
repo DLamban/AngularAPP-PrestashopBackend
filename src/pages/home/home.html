@@ -1,0 +1,17 @@
+<ion-header>
+
+  <ion-navbar>
+
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+   <ion-title>Pagina de inicio</ion-title>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item *ngFor="let category of categories" (click)="pushCategory(category.id)">
+    {{category.name}}
+  </ion-item>
+</ion-content>

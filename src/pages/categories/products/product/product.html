@@ -1,0 +1,59 @@
+
+
+<ion-header>
+  <ion-navbar>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-9><ion-title>{{productname}}</ion-title></ion-col>
+      <ion-col col-3 >
+
+          <ion-icon name="cart" id="iconCart"><ion-badge *ngIf="showCart">{{productsCartBadge}}</ion-badge></ion-icon>
+
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+	<ion-list>
+		<ion-grid>
+      <ion-row>
+        <ion-col col-6>
+          <img width="100%" height="auto" src={{imgUrl}}>
+        </ion-col>
+      </ion-row>
+		  <ion-row>
+        <ion-col col-2>
+
+        </ion-col>
+        <ion-col col-6>
+          <description-short></description-short>
+        </ion-col>
+        <ion-col class="price" col-4>
+         <h2>Precio: {{price | currency:'EUR'}}</h2>
+          <br>
+
+          <ion-item  *ngFor="let option_value of productOptions">
+            <ion-icon name="square" [ngStyle]="option_value">
+            </ion-icon>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-7 offset-1>
+          <ion-item (click)="addToCart()">
+            Añadir al carrito
+          </ion-item>
+        </ion-col>
+
+      </ion-row>
+      <iframe *ngIf="videoUrl!=null" class="center-content" width="85%" height="315" [src]="videoUrl" frameborder="0" allowfullscreen>
+      </iframe>
+		</ion-grid>
+	</ion-list>
+
+</ion-content>

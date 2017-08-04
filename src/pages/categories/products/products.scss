@@ -1,0 +1,37 @@
+page-products {
+
+	//align center the content of rows
+	ion-row {
+		text-align: center;
+	}
+
+  #iconCart{
+    float: right;
+    font-size: 30px;
+  }
+
+
+  //configuration of the grid
+	$grid-columns:               6 !default;
+
+	$grid-padding-width:         10px !default;
+
+	$grid-padding-widths: (
+	  xs: $grid-padding-width,
+	  sm: $grid-padding-width,
+	  md: $grid-padding-width,
+	  lg: $grid-padding-width,
+	  xl: $grid-padding-width
+	) !default;
+	$grid-breakpoints: (
+	  sm: 0,
+	  md: 768px,
+	  lg: 1024px
+	);
+
+	$grid-max-widths: (
+	  sm: 420px,
+	  md: 720px,
+	  lg: 960px
+	);
+}

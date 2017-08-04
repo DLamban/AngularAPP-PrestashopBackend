@@ -1,0 +1,9 @@
+{
+  "name": "ARAPROFI",
+  "app_id": "3d60b950",
+  "type": "ionic-angular",
+  "proxies": [{
+    "path": "/",
+    "proxyUrl": "http://destruirdocumentos.es/"
+  }]
+}

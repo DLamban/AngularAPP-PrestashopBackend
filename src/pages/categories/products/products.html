@@ -1,0 +1,42 @@
+
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>
+      <ion-col col-9>
+        productos  <ion-spinner id="loadingIcon" *ngIf="show" ></ion-spinner>
+      </ion-col>
+      <ion-col col-3 >
+
+        <ion-icon name="cart" id="iconCart"><ion-badge *ngIf="showCart">{{productsCartBadge}}</ion-badge></ion-icon>
+
+
+      </ion-col>
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+	<ion-list>
+		<ion-grid>
+        <ion-row>
+          <div [innerHTML]="categoryDescription"></div>
+        </ion-row>
+				<ion-row>
+					  <ion-col  col-4 *ngFor="let item of products">
+					  <ion-item (click)="showProduct(item.id)">
+					  	{{item.name}}<br>
+					  	<img width="auto" height="auto" src={{item.imgUrl}}>
+					  </ion-item>
+
+					  </ion-col>
+				</ion-row>
+
+		</ion-grid>
+	</ion-list>
+
+
+</ion-content>
