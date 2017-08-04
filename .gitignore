@@ -32,9 +32,4 @@ $RECYCLE.BIN/
 .DS_Store
 Thumbs.db
 UserInterfaceState.xcuserstate
-<<<<<<< HEAD
 
-#secret config
-src/app/config.ts
-=======
->>>>>>> rebasing
